@@ -1,0 +1,43 @@
+ #include <stdio.h>
+
+int main(void) {
+  int unidade;
+  double valor1;
+  double valorF = 0;
+  printf("escolha a medida que quer converter\ndigite 1 para metros em "
+         "km\ndigite 2 para km  em metros\ndigite 3 para metros em cm\ndigite "
+         "4 para cm em metros\n");
+  scanf("%i", &unidade);
+  switch (unidade) {
+  case 1:
+    printf("\ndigite um valor em metros\n");
+    scanf("%lf", &valor1);
+    valorF = valor1 / 1000;
+    printf("\no resultdo da conversão de metros em Km eh %.2lf km\n", valorF);
+    break;
+
+  case 2:
+    printf("\ndigite um valor em quilometros\n");
+    scanf("%lf", &valor1);
+    valorF = valor1 * 1000;
+    printf("\no resultdo da conversão de Km em metros eh %.lf metros\n", valorF);
+    break;
+  case 3:
+    printf("\ndigite um valor em metros\n");
+    scanf("%lf", &valor1);
+    valorF = valor1 * 100;
+    printf("\no resultdo da conversão de metros em centimetros eh %.2lf centimetros\n",valorF);
+    break;
+  case 4:
+    printf("\ndigite um valor em centimetros\n");
+    scanf("%lf", &valor1);
+    valorF = valor1 / 100;
+    printf(
+        "\no resultdo da conversão de centimetros para metros eh %.2lf metros\n", valorF);
+    break;
+          default:
+          printf("opção invalida");
+  }
+  printf("Hello World\n");
+  return 0;
+}
